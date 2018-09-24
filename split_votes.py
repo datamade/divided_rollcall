@@ -24,7 +24,13 @@ while page != max_page:
 
             alderman = {}
             for vote in vote_details.json()['votes']:
-                alderman[vote['voter_name']] = vote['option']
+                name = vote['voter_name']
+                if name == 'Santiago, Milagros':
+                    name = 'Santiago, Milagros S.'
+                elif name == 'King, Sophia':
+                    name = 'King, Sophia D.'
+                alderman[name] = vote['option']
+
             all_alderman.update(alderman)
 
             alderman['bill'] = result['bill']['identifier']
