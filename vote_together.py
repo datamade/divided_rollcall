@@ -1,10 +1,7 @@
 import csv
 import sys
-import igraph
 
 import numpy
-
-import matplotlib.pyplot as plt
 
 
 reader = csv.reader(sys.stdin)
